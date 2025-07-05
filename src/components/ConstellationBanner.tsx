@@ -13,96 +13,72 @@ const ConstellationBanner = ({ userName }: ConstellationBannerProps) => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
-      <Card className="bg-gradient-to-r from-yellow-400/30 via-pink-500/30 to-purple-600/30 backdrop-blur-lg border-yellow-300/60 shadow-2xl overflow-hidden">
-        <CardContent className="p-8 relative">
-          {/* Estrellas flotantes */}
-          <div className="absolute inset-0 overflow-hidden">
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute text-yellow-300"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                }}
-                animate={{
-                  scale: [0.5, 1.5, 0.5],
-                  rotate: [0, 180, 360],
-                }}
-                transition={{
-                  duration: 3 + Math.random() * 2,
-                  repeat: Infinity,
-                  delay: Math.random() * 2,
-                }}
-              >
-                ✨
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="relative z-10 text-center">
+      <Card className="bg-gradient-to-r from-indigo-200/90 via-purple-200/90 to-pink-200/90 backdrop-blur-lg border-indigo-300/70 shadow-2xl overflow-hidden">
+        <CardContent className="p-6 text-center relative">
+          <div className="relative z-10">
             <motion.h1
-              className="text-5xl md:text-7xl font-bold text-white mb-4 drop-shadow-2xl"
-              animate={{
+              className="text-4xl md:text-5xl font-bold text-gray-800 mb-2"
+              animate={{ 
                 textShadow: [
-                  '0 0 20px rgba(255,255,255,0.5)',
-                  '0 0 30px rgba(255,182,193,0.8)',
-                  '0 0 20px rgba(255,255,255,0.5)'
-                ],
+                  "0 0 20px rgba(147, 51, 234, 0.5)",
+                  "0 0 30px rgba(236, 72, 153, 0.5)",
+                  "0 0 20px rgba(147, 51, 234, 0.5)"
+                ]
               }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-              }}
+              transition={{ duration: 3, repeat: Infinity }}
             >
-              {userName} & Sky
+              🌟 {userName} & Sky 🌟
             </motion.h1>
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              className="text-4xl mb-4"
+            <motion.p
+              className="text-xl text-slate-700 font-semibold"
+              animate={{ opacity: [0.8, 1, 0.8] }}
+              transition={{ duration: 2, repeat: Infinity }}
             >
-              🌟
-            </motion.div>
-            <p className="text-2xl text-white font-bold drop-shadow-lg">
-              🚀 Celebración Intergaláctica 🚀
-            </p>
-            <p className="text-lg text-cyan-100 mt-2 drop-shadow-md italic">
-              "Donde los sueños gatunos se encuentran con las estrellas"
-            </p>
-            <div className="flex justify-center space-x-4 mt-4 text-3xl">
-              <motion.span
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0 }}
-              >
-                🌙
-              </motion.span>
-              <motion.span
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}
-              >
-                ⭐
-              </motion.span>
-              <motion.span
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0.4 }}
-              >
-                🌟
-              </motion.span>
-              <motion.span
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
-              >
-                ✨
-              </motion.span>
-              <motion.span
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity, delay: 0.8 }}
-              >
-                🌠
-              </motion.span>
-            </div>
+              ✨ Aventureros Cósmicos Unidos por la Ternura ✨
+            </motion.p>
           </div>
+          
+          {/* Estrellas animadas de fondo */}
+          <motion.div
+            className="absolute top-2 left-4 text-2xl text-yellow-500"
+            animate={{ 
+              rotate: [0, 360],
+              scale: [1, 1.2, 1]
+            }}
+            transition={{ duration: 4, repeat: Infinity }}
+          >
+            ⭐
+          </motion.div>
+          <motion.div
+            className="absolute top-2 right-4 text-2xl text-pink-500"
+            animate={{ 
+              rotate: [360, 0],
+              y: [0, -5, 0]
+            }}
+            transition={{ duration: 3, repeat: Infinity }}
+          >
+            ✨
+          </motion.div>
+          <motion.div
+            className="absolute bottom-2 left-6 text-2xl text-blue-500"
+            animate={{ 
+              scale: [1, 1.3, 1],
+              rotate: [0, 180, 360]
+            }}
+            transition={{ duration: 5, repeat: Infinity }}
+          >
+            🌟
+          </motion.div>
+          <motion.div
+            className="absolute bottom-2 right-6 text-2xl text-purple-500"
+            animate={{ 
+              y: [0, -8, 0],
+              x: [0, 3, 0]
+            }}
+            transition={{ duration: 2.5, repeat: Infinity }}
+          >
+            💫
+          </motion.div>
         </CardContent>
       </Card>
     </motion.div>
