@@ -21,7 +21,7 @@ const GalacticInvitation = ({ userName }: GalacticInvitationProps) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
       >
-        <Card className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg border-pink-300/30 shadow-2xl">
+        <Card className="bg-gradient-to-br from-purple-500/30 to-pink-500/30 backdrop-blur-lg border-pink-300/50 shadow-2xl">
           <CardContent className="p-8 text-center">
             <motion.div
               animate={{ 
@@ -33,20 +33,23 @@ const GalacticInvitation = ({ userName }: GalacticInvitationProps) => {
             >
               🐱‍🚀
             </motion.div>
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6 drop-shadow-lg">
               ¡Hola {userName}! 🌟
             </h2>
-            <div className="text-xl text-pink-100 leading-relaxed space-y-4">
-              <p>
-                Soy <span className="text-yellow-300 font-bold text-2xl">Sky</span>, 
-                y quiero que vengas a mi cumpleaños estelar! 🎂✨
+            <div className="text-xl text-white leading-relaxed space-y-4 drop-shadow-md">
+              <p className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent text-2xl font-bold">
+                Soy Sky, tu gatito astronauta favorito! 🚀
               </p>
-              <p>
-                ¡Trae tu traje espacial y prepárate para ronronear entre planetas! 🚀
+              <p className="text-white">
+                Te he enviado esta invitación desde mi nave espacial porque... 
+                <span className="text-cyan-200 font-semibold">¡quiero que vengas a mi cumpleaños intergaláctico!</span>
               </p>
-              <p className="text-lg text-blue-200">
-                Será una aventura cósmica llena de diversión, 
-                gatitos espaciales y mucha magia galáctica 🌌
+              <p className="text-white">
+                Abróchate el cinturón cósmico y prepárate para un 
+                <span className="text-purple-200 font-semibold"> miau-tántico despegue</span> hacia la diversión! 🛸
+              </p>
+              <p className="text-lg text-yellow-100 font-medium">
+                Sky ha reservado una estrella especial solo para ti ✨
               </p>
             </div>
             <motion.div
@@ -72,17 +75,20 @@ const GalacticInvitation = ({ userName }: GalacticInvitationProps) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.8 }}
       >
-        <Card className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 backdrop-blur-lg border-indigo-300/30 shadow-2xl">
+        <Card className="bg-gradient-to-br from-indigo-500/30 to-purple-500/30 backdrop-blur-lg border-indigo-300/50 shadow-2xl">
           <CardContent className="p-6 text-center">
-            <p className="text-2xl text-white mb-4">
-              ¡No te pierdas esta aventura intergaláctica! 🌠
+            <p className="text-2xl text-white mb-4 drop-shadow-md font-semibold">
+              ¡Nos vamos a la galaxia de la ternura! 🌠
             </p>
-            <p className="text-lg text-indigo-200">
-              Con amor cósmico, Sky 💜🐾
+            <p className="text-lg text-cyan-100 drop-shadow-sm">
+              Con ronroneos cósmicos y patitas estelares, Sky 💜🐾
             </p>
             <div className="mt-4 text-4xl">
               🌟🐱🌟
             </div>
+            <p className="text-sm text-purple-200 mt-2 italic">
+              "Donde los sueños gatunos se vuelven realidad entre las estrellas"
+            </p>
           </CardContent>
         </Card>
       </motion.div>

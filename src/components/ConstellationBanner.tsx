@@ -13,7 +13,7 @@ const ConstellationBanner = ({ userName }: ConstellationBannerProps) => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
     >
-      <Card className="bg-gradient-to-r from-yellow-400/20 via-pink-500/20 to-purple-600/20 backdrop-blur-lg border-yellow-300/40 shadow-2xl overflow-hidden">
+      <Card className="bg-gradient-to-r from-yellow-400/30 via-pink-500/30 to-purple-600/30 backdrop-blur-lg border-yellow-300/60 shadow-2xl overflow-hidden">
         <CardContent className="p-8 relative">
           {/* Estrellas flotantes */}
           <div className="absolute inset-0 overflow-hidden">
@@ -42,9 +42,13 @@ const ConstellationBanner = ({ userName }: ConstellationBannerProps) => {
 
           <div className="relative z-10 text-center">
             <motion.h1
-              className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent mb-4"
+              className="text-5xl md:text-7xl font-bold text-white mb-4 drop-shadow-2xl"
               animate={{
-                backgroundPosition: ['0%', '100%', '0%'],
+                textShadow: [
+                  '0 0 20px rgba(255,255,255,0.5)',
+                  '0 0 30px rgba(255,182,193,0.8)',
+                  '0 0 20px rgba(255,255,255,0.5)'
+                ],
               }}
               transition={{
                 duration: 4,
@@ -60,8 +64,11 @@ const ConstellationBanner = ({ userName }: ConstellationBannerProps) => {
             >
               🌟
             </motion.div>
-            <p className="text-2xl text-white font-semibold">
-              Celebración Intergaláctica 🚀
+            <p className="text-2xl text-white font-bold drop-shadow-lg">
+              🚀 Celebración Intergaláctica 🚀
+            </p>
+            <p className="text-lg text-cyan-100 mt-2 drop-shadow-md italic">
+              "Donde los sueños gatunos se encuentran con las estrellas"
             </p>
             <div className="flex justify-center space-x-4 mt-4 text-3xl">
               <motion.span
